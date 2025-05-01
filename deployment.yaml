@@ -4,7 +4,7 @@ metadata:
   name: app-add-sa
   namespace: app
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::851765306105:role/pod-add
+    eks.amazonaws.com/role-arn: arn:aws:iam::XXXXXXXX:role/pod-add
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -24,7 +24,7 @@ spec:
       serviceAccountName: app-add-sa
       containers:
         - name: my-app
-          image: 851765306105.dkr.ecr.us-east-1.amazonaws.com/dockerimage
+          image: XXXXXXX.dkr.ecr.us-east-1.amazonaws.com/dockerimage
           ports:
             - containerPort: 5000
 ---
